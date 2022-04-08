@@ -1,0 +1,232 @@
+body {
+  background: black;
+  color: white;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  width: 1440px;
+}
+.people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+.card {
+  max-width: 430px;
+  color: black;
+  border-top: 5px solid hsl(212, 86%, 64%);
+  background: white;
+  margin: 1em;
+  padding: 44px 40px;
+  box-shadow: 0 1.5em 2.5em -0.5em rgba(#000000, 0.1);
+  transition: transform 0.45s ease, background 0.45s ease;
+  cursor: pointer;
+  border-radius: 0.5em;
+}
+.card:hover {
+  background: hsl(212, 86%, 64%);
+  transform: scale(1.02);
+  border-top: 5px solid white;
+}
+.card:hover .name {
+  color: white;
+  border-bottom-color: #a754c4;
+}
+.card:hover p {
+  color: white;
+}
+.card:hover .text_link {
+  color: #fff;
+}
+.card:hover .text_link svg {
+  animation: point 1.25s infinite alternate;
+}
+.card:hover .text_link svg path {
+  fill: #fff;
+}
+.name {
+  color: #2e3c40;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  padding-bottom: 8px;
+  margin: 0 0 2.286px;
+  border-bottom: 2px solid hsl(212, 86%, 64%);
+  transition: color 0.45s ease, border 0.45s ease;
+}
+.card p {
+  color: #627084;
+  font-weight: 500;
+}
+.text_link {
+  color: #753bbd;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: auto 0 0;
+  cursor: pointer;
+}
+svg {
+  margin-left: 8px;
+}
+
+
+/*details page*/
+.detailed_card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  margin: 20px;
+  overflow: hidden;
+  width: 900px;
+  height: 300px;
+}
+.detailed_card .box {
+  background-color: hsl(212, 86%, 64%);
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  max-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+.detailed_card h6 {
+  opacity: 0.6;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+.detailed_card .card_details {
+  padding: 30px;
+}
+.detailed_card .card_details p {
+  font-size: 21px;
+  color: black;
+  opacity: 0.8;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.detailed_card_link {
+  text-transform: none;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: auto 0 0;
+  cursor: pointer;
+}
+.detailed_card_link img {
+  margin-right: 8px;
+}
+
+
+/*small lapops */
+@media (min-width:1000px) and (max-width:1024px) {
+    .container{
+        width: 1000px;
+    }
+}
+
+
+
+/*tablets*/
+@media (max-width: 820px) {
+  .container {
+    width: 800px;
+  }
+  .people {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .detailed_card {
+    display: flex;
+    width: 700px;
+    height: 300px;
+  }
+  .detailed_card .box {
+    padding: 30px;
+    width: 200px;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*mobile phones*/
+@media (min-width: 300px) and (max-width:430px) {
+    .container{
+        width: 330px;
+    }
+    .star_wars_logo{
+        width:300px;
+        height: 200px;
+    }
+    .card {
+        max-width: 430px;
+        color: black;
+        margin: 0.5em;
+        padding: 20px 22px;
+      }
+    .name {
+        font-size: 20px;
+      }
+      .card p {
+        color: #627084;
+        font-weight: 500;
+        font-size: 13px;
+      }
+      .text_link {
+        font-size: 16px;
+        line-height: 1;
+      }
+      svg {
+        margin-left: 8px;
+        font-size: 16px;
+      }
+      .detailed_card {
+        display: flex;
+        flex-direction: column;
+        width: 330px;
+        height: 400px;
+      }
+      .detailed_card .box {
+        padding: 30px;
+        width: 330px;
+        display: flex;
+        flex-direction: column;
+      }
+      .detailed_card_link {
+        text-transform: none;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: auto 0 0;
+        cursor: pointer;
+      }
+      .detailed_card .card_details p {
+        font-size: 16px;
+        color: black;
+        opacity: 0.8;
+        text-transform: capitalize;
+        font-weight: 500;
+      }
+      .detailed_card h6 {
+        opacity: 0.6;
+        margin: 0;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 40px;
+      }
+  }
