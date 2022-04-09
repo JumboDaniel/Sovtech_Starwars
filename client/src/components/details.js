@@ -26,7 +26,7 @@ const Details = () => {
       <div className="box">
         <h6>{name}</h6>
         <Link to={"/"} className='detailed_card_link'>
-        <img src="https://img.icons8.com/ios/20/000000/long-arrow-left.png"/>
+        <img src="https://img.icons8.com/ios/20/000000/long-arrow-left.png" alt="back arrow"/>
           Go Back
         </Link>
       </div>

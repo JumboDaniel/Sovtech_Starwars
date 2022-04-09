@@ -5,8 +5,6 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  useQuery,
-  gql,
 } from "@apollo/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import People from "./components/people";
@@ -14,7 +12,7 @@ import Details from "./components/details";
 
 
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql",
+  uri: "https://apollographqlstarwars.herokuapp.com/graphql",
   cache: new InMemoryCache(),
 });
 
